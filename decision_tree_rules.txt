@@ -1,0 +1,40 @@
+
+==== 决策树规则 ====
+如果 age <= 29.50:
+  如果 family_members <= 2.50:
+    如果 birth_region_浙江省 <= 0.50:
+      预测: No (概率: 0.85, 样本数: 1, 占比: 0.1%)
+      规则: age <= 29.50 AND family_members <= 2.50 AND birth_region_浙江省 <= 0.50
+
+    如果 birth_region_浙江省 > 0.50:
+      预测: Yes (概率: 1.00, 样本数: 1, 占比: 0.1%)
+      规则: age <= 29.50 AND family_members <= 2.50 AND birth_region_浙江省 > 0.50
+
+  如果 family_members > 2.50:
+    如果 gender_男 <= 0.50:
+      预测: Yes (概率: 0.79, 样本数: 1, 占比: 0.1%)
+      规则: age <= 29.50 AND family_members > 2.50 AND gender_男 <= 0.50
+
+    如果 gender_男 > 0.50:
+      预测: Yes (概率: 0.54, 样本数: 1, 占比: 0.1%)
+      规则: age <= 29.50 AND family_members > 2.50 AND gender_男 > 0.50
+
+如果 age > 29.50:
+  如果 age <= 60.50:
+    如果 birth_region_内蒙古自治区 <= 0.50:
+      预测: Yes (概率: 0.99, 样本数: 1, 占比: 0.1%)
+      规则: age > 29.50 AND age <= 60.50 AND birth_region_内蒙古自治区 <= 0.50
+
+    如果 birth_region_内蒙古自治区 > 0.50:
+      预测: Yes (概率: 0.86, 样本数: 1, 占比: 0.1%)
+      规则: age > 29.50 AND age <= 60.50 AND birth_region_内蒙古自治区 > 0.50
+
+  如果 age > 60.50:
+    如果 family_members <= 3.50:
+      预测: No (概率: 0.52, 样本数: 1, 占比: 0.1%)
+      规则: age > 29.50 AND age > 60.50 AND family_members <= 3.50
+
+    如果 family_members > 3.50:
+      预测: Yes (概率: 0.86, 样本数: 1, 占比: 0.1%)
+      规则: age > 29.50 AND age > 60.50 AND family_members > 3.50
+

@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<age &le; 29.5<br/>gini = 0.298<br/>samples = 800<br/>value = [146, 654]<br/>class = Yes>, fillcolor="#65b3eb"] ;
+1 [label=<family_members &le; 2.5<br/>gini = 0.499<br/>samples = 173<br/>value = [91, 82]<br/>class = No>, fillcolor="#fcf3eb"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<birth_region_浙江省 &le; 0.5<br/>gini = 0.294<br/>samples = 67<br/>value = [55, 12]<br/>class = No>, fillcolor="#eb9c64"] ;
+1 -> 2 ;
+3 [label=<gini = 0.26<br/>samples = 65<br/>value = [55, 10]<br/>class = No>, fillcolor="#ea985d"] ;
+2 -> 3 ;
+4 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 2]<br/>class = Yes>, fillcolor="#399de5"] ;
+2 -> 4 ;
+5 [label=<gender_男 &le; 0.5<br/>gini = 0.449<br/>samples = 106<br/>value = [36, 70]<br/>class = Yes>, fillcolor="#9fcff2"] ;
+1 -> 5 ;
+6 [label=<gini = 0.334<br/>samples = 52<br/>value = [11, 41]<br/>class = Yes>, fillcolor="#6eb7ec"] ;
+5 -> 6 ;
+7 [label=<gini = 0.497<br/>samples = 54<br/>value = [25.0, 29.0]<br/>class = Yes>, fillcolor="#e4f1fb"] ;
+5 -> 7 ;
+8 [label=<age &le; 60.5<br/>gini = 0.16<br/>samples = 627<br/>value = [55, 572]<br/>class = Yes>, fillcolor="#4ca6e8"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label=<birth_region_内蒙古自治区 &le; 0.5<br/>gini = 0.032<br/>samples = 489<br/>value = [8, 481]<br/>class = Yes>, fillcolor="#3c9fe5"] ;
+8 -> 9 ;
+10 [label=<gini = 0.025<br/>samples = 475<br/>value = [6, 469]<br/>class = Yes>, fillcolor="#3c9ee5"] ;
+9 -> 10 ;
+11 [label=<gini = 0.245<br/>samples = 14<br/>value = [2, 12]<br/>class = Yes>, fillcolor="#5aade9"] ;
+9 -> 11 ;
+12 [label=<family_members &le; 3.5<br/>gini = 0.449<br/>samples = 138<br/>value = [47, 91]<br/>class = Yes>, fillcolor="#9fd0f2"] ;
+8 -> 12 ;
+13 [label=<gini = 0.499<br/>samples = 73<br/>value = [38, 35]<br/>class = No>, fillcolor="#fdf5ef"] ;
+12 -> 13 ;
+14 [label=<gini = 0.239<br/>samples = 65<br/>value = [9, 56]<br/>class = Yes>, fillcolor="#59ade9"] ;
+12 -> 14 ;
+}
